@@ -3,6 +3,8 @@ package com.twu.biblioteca;
 import org.junit.Test;
 
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -15,7 +17,7 @@ public class BibliotecaAppMenuTest {
     public void shouldReturnWelcomeMessage(){
         // Given
         BibliotecaAppMenu menu = new BibliotecaAppMenu();
-        String expectedMessage = "Hello World!";
+        String expectedMessage = "Welcome to Bibilioteca, Your one-stop-shop for great book titles in Bangalore!";
         // When
         String actualMessage = menu.getWelcomeMessage();
         // Then
@@ -34,6 +36,21 @@ public class BibliotecaAppMenuTest {
 
         // Then
         verify(printStream).println(message);
+    }
+
+    @Test
+    public void shouldFormatBooksDescription(){
+        // Given
+        ArrayList<String> books = new ArrayList<String>(Arrays.asList("To Kill a Mockingbird", "Harry Potter"));
+        BibliotecaAppMenu menu = new BibliotecaAppMenu();
+        String expectedBooksDescription = "To Kill a Mockingbird\nHarry Potter\n";
+
+        // When
+        String actualBooksDescription = menu.formatBooksDescriptions(books);
+
+        // Then
+        assertThat(actualBooksDescription, is(equalTo(expectedBooksDescription)));
+
     }
 
 
