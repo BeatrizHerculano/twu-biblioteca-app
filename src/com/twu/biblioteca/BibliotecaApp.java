@@ -6,5 +6,11 @@ public class BibliotecaApp {
         BibliotecaAppMenu menu = new BibliotecaAppMenu();
         String welcome = menu.getWelcomeMessage();
         menu.printMessage(welcome, System.out);
+
+        BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
+
+        String booksDescriptions = menu.formatBooksDescriptions(catalog.getBooks());
+
+        menu.printMessage(booksDescriptions, System.out);
     }
 }
