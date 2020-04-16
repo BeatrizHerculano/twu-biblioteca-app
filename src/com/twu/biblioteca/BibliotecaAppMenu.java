@@ -14,10 +14,6 @@ public class BibliotecaAppMenu {
         this.printStream.println("Welcome to Bibilioteca, Your one-stop-shop for great book titles in Bangalore!");
     }
 
-    public void printMessage(String message) {
-        this.printStream.println(message);
-    }
-
 
     public void printOptions(ArrayList<Option> options) {
         String message = "";

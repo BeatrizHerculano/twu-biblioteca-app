@@ -24,20 +24,6 @@ public class BibliotecaAppMenuTest {
         verify(printStream).println(welcomeMessage);
     }
 
-//    @Test
-//    public void shouldCallCatalog(){
-//        // Given
-//        BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
-//        PrintStream printStream = mock(PrintStream.class);
-//
-//        // When
-//        BibliotecaAppMenu menu = new BibliotecaAppMenu(printStream);
-//        menu.printCatalog(catalog);
-//
-//        // Then
-//        verify(printStream).println(catalog.toString());
-//    }
-
     @Test
     public void shouldPrintMessage(){
         // Given
