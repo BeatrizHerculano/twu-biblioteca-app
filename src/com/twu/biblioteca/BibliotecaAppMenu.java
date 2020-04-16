@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.models.Option;
 import org.junit.Test;
 
 import java.io.PrintStream;
@@ -18,7 +19,15 @@ public class BibliotecaAppMenu {
     }
 
 
-    public void printCatalog(BibliotecaAppCatalog catalog) {
-        this.printStream.println(catalog.toString());
+    public void printOptions(ArrayList<Option> options) {
+        String message = "";
+        int index = 1;
+        for (Option option: options) {
+            String optionText = option.toString() + "\n";
+            String optionIndex = String.valueOf(index);
+            message += optionIndex+ ". " + optionText;
+            index++;
+        }
+        printStream.println(message);
     }
 }

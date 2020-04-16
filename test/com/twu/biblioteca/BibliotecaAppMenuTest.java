@@ -1,14 +1,13 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.models.Action;
+import com.twu.biblioteca.models.Option;
 import org.junit.Test;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -25,16 +24,19 @@ public class BibliotecaAppMenuTest {
         verify(printStream).println(welcomeMessage);
     }
 
-    @Test
-    public void shouldCallCatalog(){
-        BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
-        PrintStream printStream = mock(PrintStream.class);
-
-        BibliotecaAppMenu menu = new BibliotecaAppMenu(printStream);
-        menu.printCatalog(catalog);
-
-        verify(printStream).println(catalog.toString());
-    }
+//    @Test
+//    public void shouldCallCatalog(){
+//        // Given
+//        BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
+//        PrintStream printStream = mock(PrintStream.class);
+//
+//        // When
+//        BibliotecaAppMenu menu = new BibliotecaAppMenu(printStream);
+//        menu.printCatalog(catalog);
+//
+//        // Then
+//        verify(printStream).println(catalog.toString());
+//    }
 
     @Test
     public void shouldPrintMessage(){
@@ -50,6 +52,20 @@ public class BibliotecaAppMenuTest {
         verify(printStream).println(message);
     }
 
+    @Test
+    public void shouldPrintOptions(){
+        // Given
+        PrintStream printStream = mock(PrintStream.class);
+        BibliotecaAppMenu menu  = new BibliotecaAppMenu(printStream);
+        Action action =  mock(Action.class);
+        ArrayList<Option> options = new  ArrayList<Option>(Arrays.asList(new Option("My Option", action)));
+        String expectedOutput  = "1. My Option\n";
+        // When
+        menu.printOptions(options);
+
+        // Then
+        verify(printStream).println(expectedOutput);
+    }
 
 
 }
