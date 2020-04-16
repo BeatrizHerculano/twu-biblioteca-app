@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.models.Book;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,12 +15,12 @@ public class BibliotecaAppCatalogTest {
     public void shouldReturnBookList(){
         // Given
         BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
-        ArrayList<String> expectedBooks = new ArrayList<String>(Arrays.asList("To Kill a Mockingbird", "Harry Potter"));
+        String expected = "Title: To kill a Mockingbird | Author: Harper Lee | Release Date: July 11, 1960\n";
 
         // When
-        ArrayList<String> actualBooks = catalog.getBooks();
+        String actual = catalog.toString();
 
         // Then
-        assertThat(actualBooks, is(equalTo(expectedBooks)));
+        assertThat(actual, is(equalTo(expected)));
     }
 }

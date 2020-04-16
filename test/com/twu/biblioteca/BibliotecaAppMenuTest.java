@@ -13,44 +13,41 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 public class BibliotecaAppMenuTest {
+
     @Test
     public void shouldReturnWelcomeMessage(){
         // Given
-        BibliotecaAppMenu menu = new BibliotecaAppMenu();
-        String expectedMessage = "Welcome to Bibilioteca, Your one-stop-shop for great book titles in Bangalore!";
+        PrintStream printStream = mock(PrintStream.class);
+        String welcomeMessage = "Welcome to Bibilioteca, Your one-stop-shop for great book titles in Bangalore!";
         // When
-        String actualMessage = menu.getWelcomeMessage();
+        BibliotecaAppMenu menu = new BibliotecaAppMenu(printStream);
         // Then
-        assertThat(actualMessage, is(equalTo(expectedMessage)));
+        verify(printStream).println(welcomeMessage);
+    }
+
+    @Test
+    public void shouldCallCatalog(){
+        BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
+        PrintStream printStream = mock(PrintStream.class);
+
+        BibliotecaAppMenu menu = new BibliotecaAppMenu(printStream);
+        menu.printCatalog(catalog);
+
+        verify(printStream).println(catalog.toString());
     }
 
     @Test
     public void shouldPrintMessage(){
         // Given
-        BibliotecaAppMenu menu = new BibliotecaAppMenu();
         PrintStream printStream = mock(PrintStream.class);
+        BibliotecaAppMenu menu = new BibliotecaAppMenu(printStream);
         String message = "Mensagem";
 
         // When
-        menu.printMessage(message, printStream);
+        menu.printMessage(message);
 
         // Then
         verify(printStream).println(message);
-    }
-
-    @Test
-    public void shouldFormatBooksDescription(){
-        // Given
-        ArrayList<String> books = new ArrayList<String>(Arrays.asList("To Kill a Mockingbird", "Harry Potter"));
-        BibliotecaAppMenu menu = new BibliotecaAppMenu();
-        String expectedBooksDescription = "To Kill a Mockingbird\nHarry Potter\n";
-
-        // When
-        String actualBooksDescription = menu.formatBooksDescriptions(books);
-
-        // Then
-        assertThat(actualBooksDescription, is(equalTo(expectedBooksDescription)));
-
     }
 
 
