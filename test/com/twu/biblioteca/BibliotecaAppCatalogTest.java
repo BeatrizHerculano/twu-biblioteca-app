@@ -11,7 +11,7 @@ public class BibliotecaAppCatalogTest {
     public void shouldReturnBookList(){
         // Given
         BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
-        String expected = "Title: To kill a Mockingbird | Author: Harper Lee | Release Date: July 11, 1960\n";
+        String expected = "Title: To kill a Mockingbird | Author: Harper Lee | Release Year: 1960\n";
 
         // When
         String actual = catalog.toString();
