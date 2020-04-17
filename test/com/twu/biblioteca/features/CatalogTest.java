@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.features;
 
 import org.junit.Test;
 
@@ -6,11 +6,11 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class BibliotecaAppCatalogTest {
+public class CatalogTest {
     @Test
     public void shouldReturnBookList(){
         // Given
-        BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
+        Catalog catalog = new Catalog();
         String expected = "Title: To kill a Mockingbird | Author: Harper Lee | Release Year: 1960\n";
 
         // When

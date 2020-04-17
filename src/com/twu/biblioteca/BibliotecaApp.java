@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.features.Catalog;
 import com.twu.biblioteca.models.Option;
 
 import java.util.ArrayList;
@@ -11,13 +12,13 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         ArrayList<Option> options  = new ArrayList<Option>(Arrays.asList(
                 new Option("List of Books", ()->{
-                    BibliotecaAppCatalog catalog = new BibliotecaAppCatalog();
-                    System.out.println(catalog.toString());
-                }
+                        Catalog catalog = new Catalog();
+                        System.out.println(catalog.toString());
+                    }
                 )
         ));
-        BibliotecaAppMenu menu = new BibliotecaAppMenu(System.out, options);
-
-        menu.printOptions();
+        Scanner scanner = new Scanner(System.in);
+        Menu menu = new Menu(System.out, options);
+        menu.startMenu();
     }
 }
