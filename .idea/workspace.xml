@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd035c04-1a64-4495-b12d-695cfa5373f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/system_rules_1_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/system-rules-1.19.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/features/ApplicationControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/features/ApplicationControlTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblioteca.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaAppCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/features/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaAppMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/exceptions/InvalidInputException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppCatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/features/CatalogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppMenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -36,14 +36,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.twu.biblioteca.features" />
       <recent name="com.twu.biblioteca" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -70,6 +73,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationControlTest.shouldQuitTheApplication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.features" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.features.ApplicationControlTest" />
+      <option name="METHOD_NAME" value="shouldQuitTheApplication" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,22 +124,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuTest.shouldPrepareForUserInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
-      <option name="METHOD_NAME" value="shouldPrepareForUserInput" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MenuTest.shouldPrintOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -140,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.ApplicationControlTest.shouldQuitTheApplication" />
         <item itemvalue="JUnit.BibliotecaAppMenuTest.shouldPrintOptions" />
         <item itemvalue="JUnit.BibliotecaAppMenuTest" />
         <item itemvalue="JUnit.BibliotecaAppMenuTest.shouldCheckInputForInvalidOption" />
-        <item itemvalue="JUnit.BibliotecaAppMenuTest.shouldPrepareForUserInput" />
       </list>
     </recent_temporary>
   </component>
@@ -187,34 +190,38 @@
       <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>
     <state x="623" y="-786" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587144657459" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587149815322">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587233636996">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815322" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036454" />
     <state width="1750" height="316" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556360" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587149815320">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636996" />
+    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587233636994">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036451" />
     <state width="1750" height="316" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556359" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587149815320">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636994" />
+    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587233636992">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036450" />
     <state width="1750" height="316" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556358" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575887" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587149815321">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636992" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587233636995">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815321" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036452" />
     <state width="1750" height="316" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556359" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636995" />
     <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1587144735362">
       <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>
@@ -253,9 +260,10 @@
     <state x="573" y="376" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1587042384356" />
     <state x="573" y="363" key="com.intellij.ide.util.TipDialog/0.23.1792.1014@0.23.1792.1014" timestamp="1586806383970" />
     <state x="573" y="364" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586208941988" />
-    <state x="666" y="295" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586192087688">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state x="639" y="-791" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587150914466">
+      <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>
+    <state x="639" y="-791" key="com.intellij.testIntegration.createTest.CreateTestDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587150914466" />
     <state x="666" y="295" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586192087688" />
     <state x="623" y="-780" key="extract.method.dialog" timestamp="1587074097561">
       <screen x="-75" y="-1080" width="1920" height="1080" />
@@ -267,11 +275,12 @@
     <state x="651" y="-877" width="897" height="877" key="find.popup/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587057471729" />
     <state x="678" y="211" width="837" height="909" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1586815478714" />
     <state x="678" y="215" width="837" height="825" key="find.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1586192781501" />
-    <state width="600" height="467" key="javadoc.popup" timestamp="1586812915570">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="643" height="451" key="javadoc.popup" timestamp="1587232042197">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="600" height="467" key="javadoc.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1586812915570" />
     <state width="600" height="424" key="javadoc.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1586192742078" />
+    <state width="643" height="451" key="javadoc.popup/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587232042197" />
     <state x="647" y="-917" key="refactoring.ChangeSignatureDialog" timestamp="1587129654918">
       <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>

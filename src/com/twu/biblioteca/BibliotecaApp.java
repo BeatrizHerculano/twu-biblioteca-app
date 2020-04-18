@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.features.ApplicationControl;
 import com.twu.biblioteca.features.Catalog;
 import com.twu.biblioteca.models.Option;
 
@@ -15,9 +16,13 @@ public class BibliotecaApp {
                         Catalog catalog = new Catalog();
                         System.out.println(catalog.toString());
                     }
+                ),
+                new Option("Quit application", ()->{
+                        ApplicationControl appControl = new ApplicationControl();
+                        appControl.quit();
+                    }
                 )
         ));
-        Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu(System.out, options);
         menu.startMenu();
     }
