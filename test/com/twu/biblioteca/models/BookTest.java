@@ -15,4 +15,14 @@ public class BookTest {
         // then
        assertThat(convertedBook, is(expectedConvertedBook));
     }
+
+    @Test
+    public void shouldCheckoutBook(){
+        // Given
+        Book book = new Book("To kill a Mockingbird", "Harper Lee", "1960");
+        // When
+        book.checkout();
+        // Then
+        assertThat(book.isAvailable(), is(false));
+    }
 }

@@ -1,22 +1,27 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.models.Option;
+import com.twu.biblioteca.models.Action;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu {
+public class ActionMenu implements Menu {
     PrintStream printStream;
     Scanner scanner;
-    ArrayList<Option> options;
+    ArrayList<Action> actions;
 
-    Menu(PrintStream printStream, ArrayList<Option> options){
+    public ActionMenu(PrintStream printStream, ArrayList<Action> action){
         this.printStream = printStream;
-        this.options = options;
+        this.actions = action;
         this.scanner = new Scanner(System.in);
-        this.printStream.println("Welcome to Bibilioteca, Your one-stop-shop for great book titles in Bangalore!");
+        this.printStream.println(this.getInitialMessage());
     }
+
+    private String getInitialMessage(){
+        return "Option Menu";
+    }
+
 
     public void startMenu(){
         this.printOptions();
@@ -26,8 +31,8 @@ public class Menu {
     public void printOptions() {
         String message = "";
         int index = 1;
-        for (Option option: this.options) {
-            String optionText = option.toString() + "\n";
+        for (Action action: this.actions) {
+            String optionText = action.getDisplayMessage() + "\n";
             String optionIndex = String.valueOf(index);
             message += optionIndex+ ". " + optionText;
             index++;
@@ -48,7 +53,7 @@ public class Menu {
         int optionGiven = -1;
         try {
             optionGiven = Integer.parseInt(userInput) - 1;
-            // teste para numero invalido de opçao
+            // TODO: Implementar teste para numeros no range da lista
         } catch (NumberFormatException numberException) {
             optionGiven = _getIndexFromOptionGivenByTheUser(userInput);
         }
@@ -70,15 +75,15 @@ public class Menu {
 
 
     private void executeOptionByIndex(int optionIndex) {
-        options.get(optionIndex).execute();
+        actions.get(optionIndex).execute();
         this.startMenu();
     }
 
 
     private ArrayList<String> _getOptionsText() {
         ArrayList<String> optionsText = new ArrayList<String>();
-        for (Option option:options) {
-            optionsText.add(option.toString());
+        for (Action action: this.actions) {
+            optionsText.add(action.toString());
         }
         return optionsText;
     }

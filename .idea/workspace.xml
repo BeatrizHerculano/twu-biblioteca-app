@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd035c04-1a64-4495-b12d-695cfa5373f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/system_rules_1_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/system-rules-1.19.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/features/ApplicationControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/features/ApplicationControlTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Global.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/actions/ApplicationControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menu/Catalog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menu/MainMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MainMenuTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblioteca.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menu/ActionMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/features/ApplicationControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/features/Catalog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Option.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/features/ApplicationControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/actions/ApplicationControlTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/features/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/actions/CatalogTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/models/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/models/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/models/OptionTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -69,7 +81,7 @@
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,61 +93,61 @@
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.features" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.features.ApplicationControlTest" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.actions" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.actions.ApplicationControlTest" />
       <option name="METHOD_NAME" value="shouldQuitTheApplication" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookTest.shouldCheckoutBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.models" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.models.BookTest" />
+      <option name="METHOD_NAME" value="shouldCheckoutBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogTest.shouldReturnBookList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.actions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.actions" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.actions.CatalogTest" />
+      <option name="METHOD_NAME" value="shouldReturnBookList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.models" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.models.OptionTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuTest.shouldCheckInputForInvalidOption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
-      <option name="METHOD_NAME" value="shouldCheckInputForInvalidOption" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuTest.shouldPrintOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.features.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
-      <option name="METHOD_NAME" value="shouldPrintOptions" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,10 +155,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.OptionTest" />
         <item itemvalue="JUnit.ApplicationControlTest.shouldQuitTheApplication" />
-        <item itemvalue="JUnit.BibliotecaAppMenuTest.shouldPrintOptions" />
-        <item itemvalue="JUnit.BibliotecaAppMenuTest" />
-        <item itemvalue="JUnit.BibliotecaAppMenuTest.shouldCheckInputForInvalidOption" />
+        <item itemvalue="JUnit.CatalogTest.shouldReturnBookList" />
+        <item itemvalue="JUnit.BookTest.shouldCheckoutBook" />
       </list>
     </recent_temporary>
   </component>
@@ -168,60 +180,64 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="377" y="312" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586191153591" />
-    <state x="685" y="-807" key="#com.intellij.ide.util.MemberChooser" timestamp="1587058397816">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser" timestamp="1587246890733">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="685" y="-807" key="#com.intellij.ide.util.MemberChooser/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587045614987" />
     <state x="685" y="-807" key="#com.intellij.ide.util.MemberChooser/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587058397816" />
-    <state x="709" y="283" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1586812630029" />
+    <state x="709" y="283" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1587243623758" />
+    <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587246890733" />
     <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586179886445">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1586179886445" />
-    <state x="673" y="-674" width="423" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587150033125">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state x="2540" y="406" width="423" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587393360955">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="673" y="-674" width="423" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587150033125" />
-    <state x="458" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587150082503">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state x="2540" y="406" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587393360955" />
+    <state x="497" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587244351847">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="458" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587150082503" />
-    <state x="623" y="-786" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587144657459">
-      <screen x="-75" y="-1080" width="1920" height="1080" />
+    <state x="497" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587244351847" />
+    <state x="2490" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587247554613">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="-786" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587144657459" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587233636996">
+    <state x="2490" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587247554613" />
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587247554636">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815322" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036454" />
-    <state width="1750" height="316" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556360" />
+    <state width="1750" height="316" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869163" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636996" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587233636994">
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587247554636" />
+    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587247554634">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036451" />
-    <state width="1750" height="316" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556359" />
+    <state width="1750" height="316" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869162" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636994" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587233636992">
+    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587247554634" />
+    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587247554634">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036450" />
-    <state width="1750" height="316" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556358" />
+    <state width="1750" height="316" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869161" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575887" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636992" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587233636995">
+    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587247554634" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587247554635">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815321" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036452" />
-    <state width="1750" height="316" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587083556359" />
+    <state width="1750" height="316" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869162" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587233636995" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587247554635" />
     <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1587144735362">
       <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>
@@ -275,15 +291,19 @@
     <state x="651" y="-877" width="897" height="877" key="find.popup/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587057471729" />
     <state x="678" y="211" width="837" height="909" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1586815478714" />
     <state x="678" y="215" width="837" height="825" key="find.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1586192781501" />
-    <state width="643" height="451" key="javadoc.popup" timestamp="1587232042197">
-      <screen x="1792" y="0" width="1920" height="1080" />
+    <state width="600" height="467" key="javadoc.popup" timestamp="1587241707937">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="600" height="467" key="javadoc.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1586812915570" />
+    <state width="600" height="467" key="javadoc.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1587241707937" />
     <state width="600" height="424" key="javadoc.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1586192742078" />
     <state width="643" height="451" key="javadoc.popup/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587232042197" />
     <state x="647" y="-917" key="refactoring.ChangeSignatureDialog" timestamp="1587129654918">
       <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>
     <state x="647" y="-917" key="refactoring.ChangeSignatureDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587129654918" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1587244694142">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1587244694142" />
   </component>
 </project>

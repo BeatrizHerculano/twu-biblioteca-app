@@ -1,13 +1,10 @@
-package com.twu.biblioteca.features;
+package com.twu.biblioteca.actions;
 
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.Test;
-import org.mockito.Mock;
 
 import static org.mockito.Mockito.mock;
-
-import static org.junit.Assert.*;
 
 public class ApplicationControlTest {
 
