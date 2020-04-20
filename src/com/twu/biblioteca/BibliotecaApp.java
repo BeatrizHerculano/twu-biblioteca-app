@@ -1,11 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menu.Catalog;
-import com.twu.biblioteca.menu.MainMenu;
-import com.twu.biblioteca.menu.Menu;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.twu.biblioteca.menus.MainMenu;
 
 public class BibliotecaApp {
 

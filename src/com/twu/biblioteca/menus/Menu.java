@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu;
+package com.twu.biblioteca.menus;
 
 public interface Menu {
     public void startMenu();

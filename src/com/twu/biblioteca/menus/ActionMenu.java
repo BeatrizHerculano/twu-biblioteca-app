@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu;
+package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Action;
 
@@ -18,7 +18,7 @@ public class ActionMenu implements Menu {
         this.printStream.println(this.getInitialMessage());
     }
 
-    private String getInitialMessage(){
+    public String getInitialMessage(){
         return "Option Menu";
     }
 
@@ -49,11 +49,15 @@ public class ActionMenu implements Menu {
         }
         executeOptionByIndex(optionGiven);
     }
+
     public int checkForOptionIndex(String userInput ){
         int optionGiven = -1;
         try {
             optionGiven = Integer.parseInt(userInput) - 1;
             // TODO: Implementar teste para numeros no range da lista
+            if(optionGiven >= this.actions.size()){
+                optionGiven = -1;
+            }
         } catch (NumberFormatException numberException) {
             optionGiven = _getIndexFromOptionGivenByTheUser(userInput);
         }
@@ -83,7 +87,7 @@ public class ActionMenu implements Menu {
     private ArrayList<String> _getOptionsText() {
         ArrayList<String> optionsText = new ArrayList<String>();
         for (Action action: this.actions) {
-            optionsText.add(action.toString());
+            optionsText.add(action.getDisplayMessage());
         }
         return optionsText;
     }

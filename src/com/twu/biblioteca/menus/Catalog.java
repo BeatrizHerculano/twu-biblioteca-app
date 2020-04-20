@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu;
+package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Global;
 import com.twu.biblioteca.models.Action;

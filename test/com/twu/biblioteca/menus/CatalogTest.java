@@ -1,6 +1,6 @@
-package com.twu.biblioteca.actions;
+package com.twu.biblioteca.menus;
 
-import com.twu.biblioteca.menu.Catalog;
+import com.twu.biblioteca.menus.Catalog;
 import org.junit.Test;
 
 import java.io.PrintStream;
@@ -23,5 +23,16 @@ public class CatalogTest {
 
         // Then
         assertThat(actual, is(equalTo(expected)));
+    }
+
+    @Test
+    public void shouldReturnDisplayMessage(){
+        PrintStream printStream = mock(PrintStream.class);
+        Catalog catalog = new Catalog(printStream);
+        String expectedDisplayMessage = "List of books";
+
+        String actualDisplayMessage = catalog.getDisplayMessage();
+
+        assertThat(actualDisplayMessage, is(expectedDisplayMessage));
     }
 }
