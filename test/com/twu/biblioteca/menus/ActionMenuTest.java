@@ -53,7 +53,7 @@ public class ActionMenuTest {
         ActionMenu mainMenu = new ActionMenu(this.printStream, actions);
 
         // When
-        int actualOption = mainMenu.checkForOptionIndex(userInvalidInput);
+        int actualOption = mainMenu.checkForActionIndex(userInvalidInput);
 
         // Then
         assertThat(actualOption, is(expectedOption));
@@ -73,7 +73,7 @@ public class ActionMenuTest {
         ActionMenu mainMenu = new ActionMenu(this.printStream, actions);
 
         // When
-        int actualOption = mainMenu.checkForOptionIndex(userInvalidInput);
+        int actualOption = mainMenu.checkForActionIndex(userInvalidInput);
 
         // Then
         assertThat(actualOption, is(expectedOption));
@@ -93,7 +93,7 @@ public class ActionMenuTest {
         ActionMenu mainMenu = new ActionMenu(this.printStream, actions);
 
         // When
-        int actualOption = mainMenu.checkForOptionIndex(userValidInput);
+        int actualOption = mainMenu.checkForActionIndex(userValidInput);
 
         // Then
         assertThat(actualOption, is(expectedOption));
@@ -113,7 +113,7 @@ public class ActionMenuTest {
         ActionMenu mainMenu = new ActionMenu(this.printStream, actions);
 
         // When
-        int actualOption = mainMenu.checkForOptionIndex(userValidInput);
+        int actualOption = mainMenu.checkForActionIndex(userValidInput);
 
         // Then
         assertThat(actualOption, is(expectedOption));
