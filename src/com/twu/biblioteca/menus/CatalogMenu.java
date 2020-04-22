@@ -1,8 +1,6 @@
 package com.twu.biblioteca.menus;
 
-import com.twu.biblioteca.Global;
 import com.twu.biblioteca.models.Action;
-import com.twu.biblioteca.models.Book;
 import com.twu.biblioteca.models.Catalog;
 
 import java.io.PrintStream;

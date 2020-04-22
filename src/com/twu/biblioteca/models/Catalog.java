@@ -1,16 +1,15 @@
 package com.twu.biblioteca.models;
 
-import com.twu.biblioteca.Global;
+import com.twu.biblioteca.repository.BookRepository;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Catalog {
 
 
     public ArrayList<Book> getAvailableBooks() {
         ArrayList<Book> availableBooks = new ArrayList<Book>();
-        for (Book book : Global.books) {
+        for (Book book : BookRepository.books) {
             if(book.isAvailable()){
                 availableBooks.add(book);
             }
@@ -21,11 +20,11 @@ public class Catalog {
     public boolean checkoutBook(String bookTitleToCheckout) {
         Book bookWithTitle = this.firstBookByTitle(bookTitleToCheckout);
         if(bookWithTitle != null) {
-            int index = Global.books.indexOf(bookWithTitle);
-            if(!Global.books.get(index).isAvailable()){
+            int index = BookRepository.books.indexOf(bookWithTitle);
+            if(!BookRepository.books.get(index).isAvailable()){
                 return false;
             }
-            Global.books.get(index).checkout();
+            BookRepository.books.get(index).checkout();
             return true;
         }
         return false;
@@ -43,7 +42,7 @@ public class Catalog {
 
     private Book firstBookByTitle(String title){
         ArrayList<Book> booksWithTitle = new ArrayList<Book>();
-        for (Book book : Global.books) {
+        for (Book book : BookRepository.books) {
             if(book.getTitle().equals(title)){
                 booksWithTitle.add(book);
             }
@@ -58,11 +57,11 @@ public class Catalog {
     public boolean checkInBook(String bookTitle) {
         Book book = this.firstBookByTitle(bookTitle);
         if(book != null){
-            int index = Global.books.indexOf(book);
-            if(Global.books.get(index).isAvailable()){
+            int index = BookRepository.books.indexOf(book);
+            if(BookRepository.books.get(index).isAvailable()){
                 return false;
             }
-            Global.books.get(index).checkIn();
+            BookRepository.books.get(index).checkIn();
             return true;
         }
         return false;
