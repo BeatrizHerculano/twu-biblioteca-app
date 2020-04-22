@@ -45,12 +45,12 @@ public class ActionMenu implements Menu {
         String userInput = "";
         while(optionGiven < 0) {
             userInput = getUserInput();
-            optionGiven = checkForOptionIndex(userInput);
+            optionGiven = checkForActionIndex(userInput);
         }
         executeOptionByIndex(optionGiven);
     }
 
-    public int checkForOptionIndex(String userInput ){
+    public int checkForActionIndex(String userInput ){
         int optionGiven = -1;
         try {
             optionGiven = Integer.parseInt(userInput) - 1;
