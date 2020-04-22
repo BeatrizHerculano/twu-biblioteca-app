@@ -31,6 +31,7 @@ public class Catalog {
         return false;
     }
 
+
     public String getAvailableBooksString(){
         String availableBooksString = "";
         ArrayList<Book> availableBooks = this.getAvailableBooks();
@@ -52,5 +53,18 @@ public class Catalog {
         }else{
             return null;
         }
+    }
+
+    public boolean checkInBook(String bookTitle) {
+        Book book = this.firstBookByTitle(bookTitle);
+        if(book != null){
+            int index = Global.books.indexOf(book);
+            if(Global.books.get(index).isAvailable()){
+                return false;
+            }
+            Global.books.get(index).checkIn();
+            return true;
+        }
+        return false;
     }
 }

@@ -34,4 +34,8 @@ public class Book {
     public String getTitle() {
         return title;
     }
+
+    public void checkIn() {
+        this.available = true;
+    }
 }

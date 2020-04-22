@@ -25,4 +25,15 @@ public class BookTest {
         // Then
         assertThat(book.isAvailable(), is(false));
     }
+
+    @Test
+    public void shouldCheckInBook(){
+        // Given
+        Book book = new Book("To kill a Mockingbird", "Harper Lee", "1960", 1);
+        book.checkout();
+        // When
+        book.checkIn();
+        // Then
+        assertThat(book.isAvailable(), is(true));
+    }
 }
