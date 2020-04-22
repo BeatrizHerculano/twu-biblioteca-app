@@ -3,6 +3,7 @@ package com.twu.biblioteca.menus;
 import com.twu.biblioteca.Global;
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.models.Book;
+import com.twu.biblioteca.models.Catalog;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -13,17 +14,13 @@ public class CatalogMenu extends ActionMenu implements Action {
 
     public CatalogMenu(PrintStream printStream){
         super(printStream, new ArrayList<Action>());
-        this.actions = new ArrayList<Action>(Arrays.asList(  ));
-
+        this.actions = new ArrayList<Action>(Arrays.asList(  new CheckoutBook(printStream)));
         this.printStream = printStream;
     }
-
+    @Override
     public String getInitialMessage() {
-        String catalog = "";
-        for (Book book: Global.books) {
-            catalog += book.toString() + "\n";
-        }
-        return catalog;
+        Catalog catalog = new Catalog();
+        return "This are the available books:\n" + catalog.getAvailableBooksString();
     }
 
     @Override

@@ -15,7 +15,6 @@ public class ActionMenu implements Menu {
         this.printStream = printStream;
         this.actions = action;
         this.scanner = new Scanner(System.in);
-        this.printStream.println(this.getInitialMessage());
     }
 
     public String getInitialMessage(){
@@ -24,12 +23,13 @@ public class ActionMenu implements Menu {
 
 
     public void startMenu(){
+        this.printStream.println(this.getInitialMessage());
         this.printOptions();
         this.processUserInput();
     }
 
     public void printOptions() {
-        String message = "";
+        String message = "Select a option:\n";
         int index = 1;
         for (Action action: this.actions) {
             String optionText = action.getDisplayMessage() + "\n";
@@ -54,7 +54,7 @@ public class ActionMenu implements Menu {
         int optionGiven = -1;
         try {
             optionGiven = Integer.parseInt(userInput) - 1;
-            // TODO: Implementar teste para numeros no range da lista
+
             if(optionGiven >= this.actions.size()){
                 optionGiven = -1;
             }

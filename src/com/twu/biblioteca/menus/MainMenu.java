@@ -18,6 +18,7 @@ public class MainMenu extends ActionMenu {
                 Arrays.asList(new CatalogMenu(printStream), new QuitApplication())
         );
         this.scanner = new Scanner(System.in);
+
     }
 
     public String getInitialMessage(){

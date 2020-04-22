@@ -15,7 +15,7 @@ public class CatalogTest {
         boolean successfulCheckout = catalog.checkoutBook(bookToCheckout);
         int currentAvailableBooks = catalog.getAvailableBooks().size();
 
-        assertTrue(currentAvailableBooks <  availableBooks && successfulCheckout);
+        assertTrue((currentAvailableBooks <  availableBooks) && successfulCheckout);
     }
 
     @Test

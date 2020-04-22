@@ -15,7 +15,7 @@ public class CatalogMenuTest {
         // Given
         PrintStream printStream = mock(PrintStream.class);
         CatalogMenu catalogMenu = new CatalogMenu(printStream);
-        String expected = "Title: To kill a Mockingbird | Author: Harper Lee | Release Year: 1960\n";
+        String expected = "This are the available books:\n1. Title: To kill a Mockingbird | Author: Harper Lee | Release Year: 1960\n";
 
         // When
         String actual = catalogMenu.getInitialMessage();

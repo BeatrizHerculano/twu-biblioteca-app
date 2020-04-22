@@ -31,7 +31,7 @@ public class ActionMenuTest {
         ArrayList<Action> actions = new ArrayList<Action>(Arrays.asList(new ActionMock("My Option")));
 
         ActionMenu mainMenu = new ActionMenu(this.printStream, actions);
-        String expectedOutput  = "1. My Option\n";
+        String expectedOutput  = "Select a option:\n1. My Option\n";
         // When
         mainMenu.printOptions();
 

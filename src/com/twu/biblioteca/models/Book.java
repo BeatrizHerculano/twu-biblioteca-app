@@ -21,12 +21,17 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Title: " + title + " | " +
+        return  id + ". " +
+                "Title: " + title + " | " +
                 "Author: " + author + " | " +
                 "Release Year: " + releaseDate;
     }
 
     public void checkout() {
         this.available = false;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

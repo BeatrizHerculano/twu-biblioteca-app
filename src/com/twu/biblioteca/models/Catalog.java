@@ -19,8 +19,9 @@ public class Catalog {
     }
 
     public boolean checkoutBook(String bookTitleToCheckout) {
-        if(Global.books.contains(bookTitleToCheckout)) {
-            int index = Global.books.indexOf(bookTitleToCheckout);
+        Book bookWithTitle = this.firstBookByTitle(bookTitleToCheckout);
+        if(bookWithTitle != null) {
+            int index = Global.books.indexOf(bookWithTitle);
             if(!Global.books.get(index).isAvailable()){
                 return false;
             }
@@ -37,5 +38,19 @@ public class Catalog {
             availableBooksString += book.toString() + "\n";
         }
         return availableBooksString;
+    }
+
+    private Book firstBookByTitle(String title){
+        ArrayList<Book> booksWithTitle = new ArrayList<Book>();
+        for (Book book : Global.books) {
+            if(book.getTitle().equals(title)){
+                booksWithTitle.add(book);
+            }
+        }
+        if(booksWithTitle.size() > 0){
+            return booksWithTitle.get(0);
+        }else{
+            return null;
+        }
     }
 }
