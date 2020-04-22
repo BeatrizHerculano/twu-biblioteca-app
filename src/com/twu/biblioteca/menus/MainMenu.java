@@ -1,6 +1,6 @@
 package com.twu.biblioteca.menus;
 
-import com.twu.biblioteca.actions.ApplicationControl;
+import com.twu.biblioteca.actions.QuitApplication;
 import com.twu.biblioteca.models.Action;
 
 import java.io.PrintStream;
@@ -15,7 +15,7 @@ public class MainMenu extends ActionMenu {
         this.printStream = printStream;
 
         this.actions = new ArrayList<Action>(
-                Arrays.asList(new Catalog(printStream), new ApplicationControl())
+                Arrays.asList(new CatalogMenu(printStream), new QuitApplication())
         );
         this.scanner = new Scanner(System.in);
     }
