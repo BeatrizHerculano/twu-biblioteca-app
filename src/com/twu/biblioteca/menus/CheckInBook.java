@@ -2,6 +2,7 @@ package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.models.Catalog;
+import com.twu.biblioteca.repository.BookRepository;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -31,7 +32,7 @@ public class CheckInBook implements Menu, Action  {
 
     @Override
     public void printOptions() {
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new BookRepository());
         printStream.println("Type the title of the book to check in:");
     }
 
@@ -44,7 +45,7 @@ public class CheckInBook implements Menu, Action  {
     }
 
     public void checkForInvalidTitle(String userInput) {
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new BookRepository());
 
         boolean successfulCheckout = catalog.checkInBook(userInput);
 

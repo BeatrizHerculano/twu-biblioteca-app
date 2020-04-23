@@ -1,30 +1,35 @@
 package com.twu.biblioteca.models;
 
+import com.twu.biblioteca.repository.AssetRepository;
 import com.twu.biblioteca.repository.BookRepository;
 
 import java.util.ArrayList;
 
 public class Catalog {
+    AssetRepository repository;
 
-
-    public ArrayList<Book> getAvailableBooks() {
-        ArrayList<Book> availableBooks = new ArrayList<Book>();
-        for (Book book : BookRepository.books) {
-            if(book.isAvailable()){
-                availableBooks.add(book);
-            }
-        }
-        return availableBooks;
+    public Catalog(AssetRepository repository) {
+        this.repository = repository;
     }
 
-    public boolean checkoutBook(String bookTitleToCheckout) {
-        Book bookWithTitle = this.firstBookByTitle(bookTitleToCheckout);
-        if(bookWithTitle != null) {
-            int index = BookRepository.books.indexOf(bookWithTitle);
-            if(!BookRepository.books.get(index).isAvailable()){
+    public ArrayList<Asset> getAvailableAssets() {
+        ArrayList<Asset> availableAssets = new ArrayList<Asset>();
+        for (Asset asset : repository.getAllAssets()) {
+            if(asset.isAvailable()){
+                availableAssets.add(asset);
+            }
+        }
+        return availableAssets;
+    }
+
+    public boolean checkoutAssets(String assetTitleToCheckout) {
+        Asset assetWithTitle = this.firstBookByTitle(assetTitleToCheckout);
+        if(assetWithTitle != null) {
+            int index = repository.getAllAssets().indexOf(assetWithTitle);
+            if(!repository.getAllAssets().get(index).isAvailable()){
                 return false;
             }
-            BookRepository.books.get(index).checkout();
+            repository.getAllAssets().get(index).checkout();
             return true;
         }
         return false;
@@ -32,36 +37,36 @@ public class Catalog {
 
 
     public String getAvailableBooksString(){
-        String availableBooksString = "";
-        ArrayList<Book> availableBooks = this.getAvailableBooks();
-        for (Book book: availableBooks){
-            availableBooksString += book.toString() + "\n";
+        String availableAssetsString = "";
+        ArrayList<Asset> availableAssets = this.getAvailableAssets();
+        for (Asset asset: availableAssets){
+            availableAssetsString += asset.toString() + "\n";
         }
-        return availableBooksString;
+        return availableAssetsString;
     }
 
-    private Book firstBookByTitle(String title){
-        ArrayList<Book> booksWithTitle = new ArrayList<Book>();
-        for (Book book : BookRepository.books) {
-            if(book.getTitle().equals(title)){
-                booksWithTitle.add(book);
+    private Asset firstBookByTitle(String title){
+        ArrayList<Asset> assetsWithTitle = new ArrayList<Asset>();
+        for (Asset asset : repository.getAllAssets()) {
+            if(asset.getTitle().equals(title)){
+                assetsWithTitle.add(asset);
             }
         }
-        if(booksWithTitle.size() > 0){
-            return booksWithTitle.get(0);
+        if(assetsWithTitle.size() > 0){
+            return assetsWithTitle.get(0);
         }else{
             return null;
         }
     }
 
     public boolean checkInBook(String bookTitle) {
-        Book book = this.firstBookByTitle(bookTitle);
-        if(book != null){
-            int index = BookRepository.books.indexOf(book);
-            if(BookRepository.books.get(index).isAvailable()){
+        Asset asset = this.firstBookByTitle(bookTitle);
+        if(asset != null){
+            int index = repository.getAllAssets().indexOf(asset);
+            if(repository.getAllAssets().get(index).isAvailable()){
                 return false;
             }
-            BookRepository.books.get(index).checkIn();
+            repository.getAllAssets().get(index).checkIn();
             return true;
         }
         return false;

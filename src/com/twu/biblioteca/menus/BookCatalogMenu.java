@@ -2,6 +2,7 @@ package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.models.Catalog;
+import com.twu.biblioteca.repository.BookRepository;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class BookCatalogMenu extends ActionMenu implements Action {
     }
     @Override
     public String getInitialMessage() {
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new BookRepository());
         return "This are the available books:\n" + catalog.getAvailableBooksString();
     }
 

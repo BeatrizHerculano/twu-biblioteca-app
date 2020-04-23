@@ -1,6 +1,7 @@
 package com.twu.biblioteca.models;
 
 import com.twu.biblioteca.repository.BookRepository;
+import com.twu.biblioteca.repository.MovieRepository;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,50 +13,50 @@ import static org.junit.Assert.*;
 public class CatalogTest {
     @Before
     public void before(){
-        BookRepository.books = new ArrayList<Book>(Arrays.asList(new Book("To kill a Mockingbird", "Harper Lee", "1960", 1)));
+        BookRepository.books = new ArrayList<Asset>(Arrays.asList(new Book("To kill a Mockingbird", "Harper Lee", "1960", 1)));
     }
     @Test
-    public void shouldCheckoutABookWithTitle(){
-        Catalog catalog = new Catalog();
+    public void shouldCheckoutAnAssetWithTitle(){
+        Catalog catalog = new Catalog(new BookRepository());
         String bookToCheckout = "To kill a Mockingbird";
-        int availableBooks = catalog.getAvailableBooks().size();
+        int availableBooks = catalog.getAvailableAssets().size();
         // When
-        boolean successfulCheckout = catalog.checkoutBook(bookToCheckout);
-        int currentAvailableBooks = catalog.getAvailableBooks().size();
+        boolean successfulCheckout = catalog.checkoutAssets(bookToCheckout);
+        int currentAvailableBooks = catalog.getAvailableAssets().size();
 
         assertTrue((currentAvailableBooks <  availableBooks) && successfulCheckout);
     }
 
     @Test
-    public void shouldNotCheckoutABookWithInvalidTitle(){
-        Catalog catalog = new Catalog();
+    public void shouldNotCheckoutAnAssetWithInvalidTitle(){
+        Catalog catalog = new Catalog(new BookRepository());
         String invalidBookToCheckout = "To kill a Mockingbirdo";
-        int availableBooks = catalog.getAvailableBooks().size();
+        int availableBooks = catalog.getAvailableAssets().size();
         // When
-        boolean successfulCheckout = catalog.checkoutBook(invalidBookToCheckout);
-        int currentAvailableBooks = catalog.getAvailableBooks().size();
+        boolean successfulCheckout = catalog.checkoutAssets(invalidBookToCheckout);
+        int currentAvailableBooks = catalog.getAvailableAssets().size();
 
         assertTrue(currentAvailableBooks ==  availableBooks && !successfulCheckout);
     }
 
     @Test
-    public void shouldNotCheckoutAUnavailableBook(){
-        Catalog catalog = new Catalog();
+    public void shouldNotCheckoutAUnavailableAsset(){
+        Catalog catalog = new Catalog(new BookRepository());
         String bookToCheckout = "To kill a Mockingbird";
-        catalog.checkoutBook(bookToCheckout);
-        int availableBooks = catalog.getAvailableBooks().size();
+        catalog.checkoutAssets(bookToCheckout);
+        int availableBooks = catalog.getAvailableAssets().size();
         // When
-        boolean successfulCheckout = catalog.checkoutBook(bookToCheckout);
-        int currentAvailableBooks = catalog.getAvailableBooks().size();
+        boolean successfulCheckout = catalog.checkoutAssets(bookToCheckout);
+        int currentAvailableBooks = catalog.getAvailableAssets().size();
 
         assertTrue(currentAvailableBooks ==  availableBooks && !successfulCheckout);
     }
 
     @Test
-    public void shouldCheckInAValidBookByTitle(){
+    public void shouldCheckInAValidAssetByTitle(){
         String bookTitle = "To kill a Mockingbird";
-        Catalog catalog = new Catalog();
-        catalog.checkoutBook(bookTitle);
+        Catalog catalog = new Catalog(new BookRepository());
+        catalog.checkoutAssets(bookTitle);
 
         // When
         boolean successfulCheckIn = catalog.checkInBook(bookTitle);
@@ -64,9 +65,9 @@ public class CatalogTest {
     }
 
     @Test
-    public void shouldNotCheckInAInvalidBook(){
+    public void shouldNotCheckInAInvalidAsset(){
         String invalidBookTitle = "invalid";
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new MovieRepository());
 
         // When
         boolean successfulCheckIn = catalog.checkInBook(invalidBookTitle);
@@ -75,9 +76,9 @@ public class CatalogTest {
     }
 
     @Test
-    public void shouldNotCheckInAAvailableBook(){
+    public void shouldNotCheckInAAvailableAsset(){
         String invalidBookTitle = "To kill a Mockingbird";
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new BookRepository());
 
         // When
         boolean successfulCheckIn = catalog.checkInBook(invalidBookTitle);

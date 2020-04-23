@@ -1,11 +1,10 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Action;
-import com.twu.biblioteca.models.Book;
 import com.twu.biblioteca.models.Catalog;
+import com.twu.biblioteca.repository.BookRepository;
 
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CheckoutBook implements Menu, Action {
@@ -33,7 +32,7 @@ public class CheckoutBook implements Menu, Action {
 
     @Override
     public void printOptions() {
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new BookRepository());
         String availableBooksString =  catalog.getAvailableBooksString();
         printStream.println(availableBooksString);
 
@@ -48,9 +47,9 @@ public class CheckoutBook implements Menu, Action {
     }
 
     public void checkForInvalidTitle(String userInput) {
-        Catalog catalog = new Catalog();
+        Catalog catalog = new Catalog(new BookRepository());
 
-        boolean successfulCheckout = catalog.checkoutBook(userInput);
+        boolean successfulCheckout = catalog.checkoutAssets(userInput);
 
         if (successfulCheckout){
             printStream.println("Thank you! Enjoy the book");
