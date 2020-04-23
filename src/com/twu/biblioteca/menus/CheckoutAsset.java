@@ -2,6 +2,7 @@ package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.models.Catalog;
+import com.twu.biblioteca.repository.AssetRepository;
 import com.twu.biblioteca.repository.BookRepository;
 
 import java.io.PrintStream;
@@ -9,9 +10,10 @@ import java.util.Scanner;
 
 public class CheckoutAsset implements Menu, Action {
     PrintStream printStream;
-
-    public CheckoutAsset(PrintStream printStream){
+    AssetRepository repository;
+    public CheckoutAsset(PrintStream printStream, AssetRepository repository){
         this.printStream = printStream;
+        this.repository = repository;
     }
     @Override
     public void execute() {
@@ -20,19 +22,19 @@ public class CheckoutAsset implements Menu, Action {
 
     @Override
     public String getDisplayMessage() {
-        return "Checkout a Book";
+        return "Checkout a " + repository.getAssetTypeName();
     }
 
     @Override
     public void startMenu() {
-        printStream.println("Type the title of the book to checkout:");
+        printStream.println("Type the title of the "+repository.getAssetTypeName()+" to checkout:");
         printOptions();
         processUserInput();
     }
 
     @Override
     public void printOptions() {
-        Catalog catalog = new Catalog(new BookRepository());
+        Catalog catalog = new Catalog(repository);
         String availableBooksString =  catalog.getAvailableBooksString();
         printStream.println(availableBooksString);
 
@@ -47,15 +49,15 @@ public class CheckoutAsset implements Menu, Action {
     }
 
     public void checkForInvalidTitle(String userInput) {
-        Catalog catalog = new Catalog(new BookRepository());
+        Catalog catalog = new Catalog(repository);
 
         boolean successfulCheckout = catalog.checkoutAsset(userInput);
 
         if (successfulCheckout){
-            printStream.println("Thank you! Enjoy the book");
+            printStream.println("Thank you! Enjoy the "+ repository.getAssetTypeName());
         }
         else{
-            printStream.println("Sorry, that book is not available");
+            printStream.println("Sorry, that "+repository.getAssetTypeName()+" is not available");
         }
     }
 }

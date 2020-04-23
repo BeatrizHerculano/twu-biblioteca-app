@@ -13,7 +13,7 @@ public class BookCatalogMenu extends ActionMenu implements Action {
 
     public BookCatalogMenu(PrintStream printStream){
         super(printStream, new ArrayList<Action>());
-        this.actions = new ArrayList<Action>(Arrays.asList(  new CheckoutAsset(printStream), new CheckInAsset(printStream, new BookRepository())));
+        this.actions = new ArrayList<Action>(Arrays.asList(  new CheckoutAsset(printStream, new BookRepository()), new CheckInAsset(printStream, new BookRepository())));
         this.printStream = printStream;
     }
     @Override

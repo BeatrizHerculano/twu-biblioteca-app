@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menus;
 
+import com.twu.biblioteca.repository.BookRepository;
 import org.junit.Test;
 
 import java.io.PrintStream;
@@ -14,7 +15,7 @@ public class CheckoutAssetTest {
     public void shouldCheckUserInputForInvalidBookInformed(){
         String invalidTitle ="invalid";
         PrintStream printStream = mock(PrintStream.class);
-        CheckoutAsset checkoutAsset = new CheckoutAsset(printStream);
+        CheckoutAsset checkoutAsset = new CheckoutAsset(printStream, new BookRepository());
 
         checkoutAsset.checkForInvalidTitle(invalidTitle);
 
@@ -25,7 +26,7 @@ public class CheckoutAssetTest {
     public void shouldAcceptUserInputWhenValidBookInformed(){
         String invalidTitle ="To kill a Mockingbird";
         PrintStream printStream = mock(PrintStream.class);
-        CheckoutAsset checkoutAsset = new CheckoutAsset(printStream);
+        CheckoutAsset checkoutAsset = new CheckoutAsset(printStream, new BookRepository());
 
         checkoutAsset.checkForInvalidTitle(invalidTitle);
 
