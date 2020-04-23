@@ -50,7 +50,7 @@ public class LoginMenuTest {
     @Test
     public void shouldNotifyWhenLoginIsSuccessful(){
         PrintStream printStream = mock(PrintStream.class);
-        String username = "user", password = "123";
+        String username = "123-1234", password = "1234";
         Login login = new Login(username,password);
         LoginMenu menu = new LoginMenu(printStream);
 
@@ -58,32 +58,5 @@ public class LoginMenuTest {
 
         assertThat(isCredentialsValid, is(true));
     }
-
-    @Test
-    public void shouldReturnUserMenuWhenUserIsNotLibrarian(){
-        PrintStream printStream = mock(PrintStream.class);
-        String username = "user", password = "123";
-        Login login = new Login(username,password);
-        LoginMenu loginMenu = new LoginMenu(printStream);
-
-        Menu menu = loginMenu.getMenuForUser(login);
-        assertThat(menu, instanceOf(UserMenu.class));
-
-    }
-
-    @Test
-    public void shouldReturnLibrarianMenuWhenUserIsLibrarian(){
-        PrintStream printStream = mock(PrintStream.class);
-        String username = "librarian", password = "123";
-        Login login = new Login(username,password);
-        LoginMenu loginMenu = new LoginMenu(printStream);
-
-        Menu menu = loginMenu.getMenuForUser(login);
-        assertThat(menu, instanceOf(LibrarianMenu.class));
-    }
-
-
-
-
 
 }

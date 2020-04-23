@@ -32,15 +32,6 @@ public class LoginMenu implements Menu {
         return true;
     }
 
-    public Menu getMenuForUser(Login login) {
-        if (login.isLibrarian()){
-            return new LibrarianMenu(printStream);
-        }
-        else{
-            return new UserMenu(printStream);
-        }
-    }
-
     @Override
     public void startMenu() {
         this.printOptions();
@@ -64,7 +55,7 @@ public class LoginMenu implements Menu {
             login = new Login(username, password);
             userDoesNotExist = !this.verifyCredentials(login);
         }
-        Menu menu = this.getMenuForUser(login);
+        Menu menu = new UserMenu(printStream);
         menu.startMenu();
     }
 }

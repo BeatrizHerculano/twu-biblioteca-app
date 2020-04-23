@@ -8,19 +8,11 @@ public class LoginTest {
 
     @Test
     public void shouldVerifyIfUserExist(){
-        Login login = new Login("user", "123");
+        Login login = new Login("123-1234", "1234");
 
         boolean successfulLogin= login.doesUserExist();
 
         assertTrue(successfulLogin);
     }
 
-    @Test
-    public void shouldVerifyIfUserIsLibrarian(){
-        Login login = new Login("librarian", "123");
-
-        boolean isLibrarian = login.isLibrarian();
-
-        assertTrue(isLibrarian);
-    }
 }
