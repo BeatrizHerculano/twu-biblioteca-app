@@ -15,7 +15,7 @@ public class UserMenu extends ActionMenu {
         this.printStream = printStream;
 
         this.actions = new ArrayList<Action>(
-                Arrays.asList(new CatalogMenu(printStream), new QuitApplication())
+                Arrays.asList(new BookCatalogMenu(printStream), new QuitApplication())
         );
         this.scanner = new Scanner(System.in);
 

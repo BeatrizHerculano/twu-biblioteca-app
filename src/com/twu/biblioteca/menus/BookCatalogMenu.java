@@ -7,10 +7,10 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class CatalogMenu extends ActionMenu implements Action {
+public class BookCatalogMenu extends ActionMenu implements Action {
     PrintStream printStream;
 
-    public CatalogMenu(PrintStream printStream){
+    public BookCatalogMenu(PrintStream printStream){
         super(printStream, new ArrayList<Action>());
         this.actions = new ArrayList<Action>(Arrays.asList(  new CheckoutBook(printStream), new CheckInBook(printStream)));
         this.printStream = printStream;
