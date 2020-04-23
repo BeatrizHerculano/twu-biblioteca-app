@@ -1,15 +1,20 @@
 package com.twu.biblioteca.models;
 
 public class User {
-    String nickname;
+    String username;
     String password;
 
-    public User(String nickname, String password) {
-        this.nickname = nickname;
+    public User(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
     public boolean login(String nickname, String password){
-        return nickname.equals(this.nickname) && password.equals(this.password);
+        return nickname.equals(this.username) && password.equals(this.password);
+    }
+
+    @Override
+    public String toString() {
+        return "User: " + username;
     }
 }
