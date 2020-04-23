@@ -1,7 +1,6 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.menus.LoginMenu;
-import com.twu.biblioteca.menus.MainMenu;
 
 public class BibliotecaApp {
 

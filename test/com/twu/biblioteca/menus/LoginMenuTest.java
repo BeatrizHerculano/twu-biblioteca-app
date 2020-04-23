@@ -2,7 +2,6 @@ package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Login;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import java.io.PrintStream;
 
@@ -68,7 +67,7 @@ public class LoginMenuTest {
         LoginMenu loginMenu = new LoginMenu(printStream);
 
         Menu menu = loginMenu.getMenuForUser(login);
-        assertThat(menu, instanceOf(MainMenu.class));
+        assertThat(menu, instanceOf(UserMenu.class));
 
     }
 

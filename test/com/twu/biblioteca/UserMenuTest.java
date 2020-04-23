@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menus.MainMenu;
+import com.twu.biblioteca.menus.UserMenu;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
@@ -12,7 +12,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.io.PrintStream;
 
-public class MainMenuTest {
+public class UserMenuTest {
     @Mock
     PrintStream printStream;
 
@@ -25,10 +25,10 @@ public class MainMenuTest {
     public void shouldReturnWelcomeMessage(){
         // Given
         String expectedWelcomeMessage = "Welcome to Biblioteca, Your one-stop-shop for great book titles in Bangalore!";
-        MainMenu mainMenu = new MainMenu(this.printStream);
+        UserMenu userMenu = new UserMenu(this.printStream);
 
         // When
-        String actualWelcomeMessage = mainMenu.getInitialMessage();
+        String actualWelcomeMessage = userMenu.getInitialMessage();
 
         // Then
         Assert.assertThat(actualWelcomeMessage, is(equalTo(expectedWelcomeMessage)));

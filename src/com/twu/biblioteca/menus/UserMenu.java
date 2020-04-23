@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MainMenu extends ActionMenu {
+public class UserMenu extends ActionMenu {
 
-    public MainMenu(PrintStream printStream){
+    public UserMenu(PrintStream printStream){
         super(printStream, new ArrayList<Action>());
         this.printStream = printStream;
 

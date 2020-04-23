@@ -37,7 +37,7 @@ public class LoginMenu implements Menu {
             return new LibrarianMenu(printStream);
         }
         else{
-            return new MainMenu(printStream);
+            return new UserMenu(printStream);
         }
     }
 
