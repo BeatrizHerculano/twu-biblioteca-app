@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd035c04-1a64-4495-b12d-695cfa5373f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Rent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/repository/RentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Rent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/models/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/models/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/menus/CheckInAssetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/menus/CheckInAssetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/models/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/models/CatalogTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/test/com/twu/biblioteca/menus" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -67,20 +73,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RentTest.shouldConvertToString">
-    <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in biblioteca">
     <configuration name="All in biblioteca" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,17 +82,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckInAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CatalogTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.menus.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.menus" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.menus.CheckInAssetTest" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.models" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.models.CatalogTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogTest.shouldCheckInAValidAssetByTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.models" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.models.CatalogTest" />
+      <option name="METHOD_NAME" value="shouldCheckInAValidAssetByTitle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogTest.shouldCheckoutAnAssetWithTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.models" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.models.CatalogTest" />
+      <option name="METHOD_NAME" value="shouldCheckoutAnAssetWithTitle" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,29 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.shouldConvertToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.models" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.models.UserTest" />
-      <option name="METHOD_NAME" value="shouldConvertToString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RentTest.shouldConvertToString" />
-        <item itemvalue="JUnit.UserTest.shouldConvertToString" />
-        <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.All in biblioteca" />
-        <item itemvalue="JUnit.CheckInAssetTest" />
+        <item itemvalue="JUnit.CatalogTest.shouldCheckInAValidAssetByTitle" />
+        <item itemvalue="JUnit.CatalogTest" />
+        <item itemvalue="JUnit.CatalogTest.shouldCheckoutAnAssetWithTitle" />
+        <item itemvalue="JUnit.RentTest.shouldConvertToString" />
       </list>
     </recent_temporary>
   </component>
@@ -168,13 +177,13 @@
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="1891" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654146723" />
-    <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser" timestamp="1587661810780">
+    <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser" timestamp="1587664452087">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="685" y="-807" key="#com.intellij.ide.util.MemberChooser/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587045614987" />
     <state x="685" y="-807" key="#com.intellij.ide.util.MemberChooser/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587058397816" />
     <state x="709" y="283" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1587243623758" />
-    <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587661810780" />
+    <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587664452087" />
     <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587411229413" />
     <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586179886445">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -189,12 +198,12 @@
     </state>
     <state x="673" y="-674" width="423" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587150033125" />
     <state x="2540" y="406" width="423" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587589868868" />
-    <state x="2325" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587661825944">
+    <state x="2325" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587662633831">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="458" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587150082503" />
     <state x="497" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587244351847" />
-    <state x="2325" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587661825944" />
+    <state x="2325" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587662633831" />
     <state x="2325" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587411302336" />
     <state x="2490" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587660723605">
       <screen x="1792" y="0" width="1920" height="1080" />
@@ -211,82 +220,82 @@
     <state x="1892" y="100" width="1720" height="880" key="DiffContextDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654396101" />
     <state x="1892" y="100" width="1720" height="880" key="DiffContextDialog/1792.0.1920.1080/0.0.1792.1120@1792.23.1920.1057" timestamp="1587555237871" />
     <state x="1892" y="100" width="1720" height="880" key="DiffContextDialog/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587654424287" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587662067362">
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587665258010">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815322" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036454" />
     <state width="1750" height="316" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869163" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587662067362" />
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665258010" />
     <state width="939" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763553" />
     <state width="939" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567716" />
     <state width="939" height="316" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554601" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587662067360">
+    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587665258007">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036451" />
     <state width="1750" height="316" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869162" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587662067360" />
+    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665258007" />
     <state width="939" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763551" />
     <state width="939" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567714" />
     <state width="939" height="316" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554599" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587662067359">
+    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587665258006">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036450" />
     <state width="1750" height="316" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869161" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575887" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587662067359" />
+    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665258006" />
     <state width="939" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763550" />
     <state width="939" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567714" />
     <state width="939" height="316" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554599" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587662067361">
+    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587665258009">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815321" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036452" />
     <state width="1750" height="316" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869162" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587662067361" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665258009" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763552" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567715" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1014@1792.0.1920.1080" timestamp="1587558338994" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554601" />
-    <state width="939" height="374" key="GridCell.Tab.1.bottom" timestamp="1587564917681">
+    <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1587665186726">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="374" key="GridCell.Tab.1.bottom/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587144735362" />
     <state width="1878" height="375" key="GridCell.Tab.1.bottom/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061003199" />
     <state width="1750" height="390" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587083528947" />
-    <state width="939" height="374" key="GridCell.Tab.1.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587564917681" />
+    <state width="1878" height="374" key="GridCell.Tab.1.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665186726" />
     <state width="1878" height="374" key="GridCell.Tab.1.bottom/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587556369776" />
-    <state width="939" height="374" key="GridCell.Tab.1.center" timestamp="1587564917680">
+    <state width="1878" height="374" key="GridCell.Tab.1.center" timestamp="1587665186725">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="374" key="GridCell.Tab.1.center/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587144735360" />
     <state width="1878" height="375" key="GridCell.Tab.1.center/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061003197" />
     <state width="1750" height="390" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587083528947" />
-    <state width="939" height="374" key="GridCell.Tab.1.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587564917680" />
+    <state width="1878" height="374" key="GridCell.Tab.1.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665186725" />
     <state width="1878" height="374" key="GridCell.Tab.1.center/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587556369774" />
-    <state width="939" height="374" key="GridCell.Tab.1.left" timestamp="1587564917679">
+    <state width="1878" height="374" key="GridCell.Tab.1.left" timestamp="1587665186724">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="374" key="GridCell.Tab.1.left/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587144735360" />
     <state width="1878" height="375" key="GridCell.Tab.1.left/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061003196" />
     <state width="1750" height="390" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587083528946" />
-    <state width="939" height="374" key="GridCell.Tab.1.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587564917679" />
+    <state width="1878" height="374" key="GridCell.Tab.1.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665186724" />
     <state width="1878" height="374" key="GridCell.Tab.1.left/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587556369774" />
-    <state width="939" height="374" key="GridCell.Tab.1.right" timestamp="1587564917680">
+    <state width="1878" height="374" key="GridCell.Tab.1.right" timestamp="1587665186725">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="374" key="GridCell.Tab.1.right/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587144735361" />
     <state width="1878" height="375" key="GridCell.Tab.1.right/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061003198" />
     <state width="1750" height="390" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587083528947" />
-    <state width="939" height="374" key="GridCell.Tab.1.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587564917680" />
+    <state width="1878" height="374" key="GridCell.Tab.1.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587665186725" />
     <state width="1878" height="374" key="GridCell.Tab.1.right/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587556369775" />
     <state x="397" y="170" key="SettingsEditor" timestamp="1586179336542">
       <screen x="0" y="23" width="1792" height="1017" />
@@ -331,11 +340,11 @@
       <screen x="-75" y="-1080" width="1920" height="1080" />
     </state>
     <state x="647" y="-917" key="refactoring.ChangeSignatureDialog/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587129654918" />
-    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1587594518414">
+    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1587663231829">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1587244694142" />
-    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587594518414" />
+    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587663231829" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -357,13 +366,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/models/Catalog.java</url>
-          <line>39</line>
+          <line>43</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/menus/AssetCatalogMenu.java</url>
           <line>24</line>
-          <properties class="com.twu.biblioteca.menus.AssetCatalogMenu" method="execute">
+          <properties class="com.twu.biblioteca.menus.AssetCatalogMenu">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="20" />

@@ -9,9 +9,18 @@ public class User {
         this.password = password;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     public boolean login(String nickname, String password){
         return nickname.equals(this.username) && password.equals(this.password);
     }
+
 
     @Override
     public String toString() {

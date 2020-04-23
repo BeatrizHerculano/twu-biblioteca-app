@@ -1,6 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Login;
+import com.twu.biblioteca.repository.LoginRepository;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -56,6 +57,7 @@ public class LoginMenu implements Menu {
             userDoesNotExist = !this.verifyCredentials(login);
         }
         Menu menu = new UserMenu(printStream);
+        LoginRepository.loggedInUser = login.getUser();
         menu.startMenu();
     }
 }

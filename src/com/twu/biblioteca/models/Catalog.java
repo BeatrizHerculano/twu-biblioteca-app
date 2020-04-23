@@ -2,6 +2,8 @@ package com.twu.biblioteca.models;
 
 import com.twu.biblioteca.repository.AssetRepository;
 import com.twu.biblioteca.repository.BookRepository;
+import com.twu.biblioteca.repository.LoginRepository;
+import com.twu.biblioteca.repository.RentRepository;
 
 import java.util.ArrayList;
 
@@ -30,6 +32,8 @@ public class Catalog {
                 return false;
             }
             repository.getAllAssets().get(index).checkout();
+            Asset rentedAsset = repository.getAllAssets().get(index);
+            new RentRepository().addNewRent(new Rent(LoginRepository.loggedInUser, rentedAsset));
             return true;
         }
         return false;
@@ -66,6 +70,8 @@ public class Catalog {
             if(repository.getAllAssets().get(index).isAvailable()){
                 return false;
             }
+            Asset rentedAsset = repository.getAllAssets().get(index);
+            new RentRepository().removeRent(new Rent(LoginRepository.loggedInUser, rentedAsset));
             repository.getAllAssets().get(index).checkIn();
             return true;
         }

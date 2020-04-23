@@ -9,6 +9,14 @@ public class Rent {
         this.asset = asset;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public Asset getAsset() {
+        return asset;
+    }
+
     @Override
     public String toString() {
         return asset.toString() + " ["+user.toString()+"]";

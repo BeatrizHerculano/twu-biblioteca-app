@@ -3,7 +3,9 @@ package com.twu.biblioteca.menus;
 import com.twu.biblioteca.models.Asset;
 import com.twu.biblioteca.models.Book;
 import com.twu.biblioteca.models.Catalog;
+import com.twu.biblioteca.models.User;
 import com.twu.biblioteca.repository.BookRepository;
+import com.twu.biblioteca.repository.LoginRepository;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,6 +20,7 @@ public class CheckInAssetTest {
     @Before
     public void before(){
         new BookRepository().books = new ArrayList<Asset>(Arrays.asList(new Book("To kill a Mockingbird", "Harper Lee", "1960", 1)));
+        LoginRepository.loggedInUser = new User("123-1234", "123");
     }
     @Test
     public void shouldCheckUserInputForInvalidBookInformed(){
