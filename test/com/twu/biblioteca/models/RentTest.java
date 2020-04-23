@@ -9,7 +9,7 @@ public class RentTest {
 
     @Test
     public void shouldConvertToString(){
-        User user = new User("123-1234", "123");
+        User user = new User("123-1234", "123", "Name", "email@test.com", "11 1234-5678" );
         Movie movie = new Movie("Se7en","David Fincher", "1995", 9, 1);
         Rent rent = new Rent(user, movie);
         String expectedRent = "1. Title: Se7en | Director: David Fincher | Release Year: 1995 | Rating: 9 [User: 123-1234]";

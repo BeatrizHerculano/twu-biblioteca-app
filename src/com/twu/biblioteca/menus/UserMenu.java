@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menus;
 
+import com.twu.biblioteca.actions.DisplayUserInfo;
 import com.twu.biblioteca.actions.QuitApplication;
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.repository.BookRepository;
@@ -17,7 +18,11 @@ public class UserMenu extends ActionMenu {
         this.printStream = printStream;
 
         this.actions = new ArrayList<Action>(
-                Arrays.asList(new AssetCatalogMenu(printStream, new BookRepository()), new AssetCatalogMenu(printStream, new MovieRepository()), new QuitApplication())
+                Arrays.asList(
+                        new AssetCatalogMenu(printStream, new BookRepository()),
+                        new AssetCatalogMenu(printStream, new MovieRepository()),
+                        new QuitApplication(),
+                        new DisplayUserInfo(printStream))
         );
         this.scanner = new Scanner(System.in);
 

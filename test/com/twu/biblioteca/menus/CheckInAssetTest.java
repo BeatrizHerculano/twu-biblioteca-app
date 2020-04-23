@@ -20,7 +20,7 @@ public class CheckInAssetTest {
     @Before
     public void before(){
         new BookRepository().books = new ArrayList<Asset>(Arrays.asList(new Book("To kill a Mockingbird", "Harper Lee", "1960", 1)));
-        LoginRepository.loggedInUser = new User("123-1234", "123");
+        LoginRepository.loggedInUser = new User("123-1234", "123", "Name", "email@test.com", "11 1234-5678" );
     }
     @Test
     public void shouldCheckUserInputForInvalidBookInformed(){

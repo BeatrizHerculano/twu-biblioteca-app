@@ -67,7 +67,7 @@ public class CatalogTest {
 
     @Test
     public void shouldCheckInAValidAssetByTitle(){
-        LoginRepository.loggedInUser = new User("123-1234", "123");
+        LoginRepository.loggedInUser = new User("123-1234", "123", "Name", "email@test.com", "11 1234-5678" );
         String bookTitle = "To kill a Mockingbird";
         Catalog catalog = new Catalog(new BookRepository());
         catalog.checkoutAsset(bookTitle);
