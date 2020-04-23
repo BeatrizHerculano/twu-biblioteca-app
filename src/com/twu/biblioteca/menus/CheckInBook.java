@@ -47,7 +47,7 @@ public class CheckInBook implements Menu, Action  {
     public void checkForInvalidTitle(String userInput) {
         Catalog catalog = new Catalog(new BookRepository());
 
-        boolean successfulCheckout = catalog.checkInBook(userInput);
+        boolean successfulCheckout = catalog.checkInAsset(userInput);
 
         if (successfulCheckout){
             printStream.println("Thank you for returning the book");

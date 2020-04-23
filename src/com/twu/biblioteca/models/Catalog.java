@@ -22,7 +22,7 @@ public class Catalog {
         return availableAssets;
     }
 
-    public boolean checkoutAssets(String assetTitleToCheckout) {
+    public boolean checkoutAsset(String assetTitleToCheckout) {
         Asset assetWithTitle = this.firstBookByTitle(assetTitleToCheckout);
         if(assetWithTitle != null) {
             int index = repository.getAllAssets().indexOf(assetWithTitle);
@@ -59,7 +59,7 @@ public class Catalog {
         }
     }
 
-    public boolean checkInBook(String bookTitle) {
+    public boolean checkInAsset(String bookTitle) {
         Asset asset = this.firstBookByTitle(bookTitle);
         if(asset != null){
             int index = repository.getAllAssets().indexOf(asset);

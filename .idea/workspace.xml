@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd035c04-1a64-4495-b12d-695cfa5373f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Asset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/repository/AssetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/menus/CheckInBookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/BookCatalogMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/BookCatalogMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/CheckInBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/CheckInBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/CheckoutBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/menus/CheckoutBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/repository/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/models/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/models/CatalogTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +19,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,23 +70,25 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in biblioteca">
-    <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in biblioteca" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckInBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.menus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.menus" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.menus.CheckInBookTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,10 +144,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in biblioteca" />
+        <item itemvalue="JUnit.CheckInBookTest" />
         <item itemvalue="JUnit.MovieTest.shouldConvertMovieToString" />
         <item itemvalue="JUnit.MovieCatalogMenuTest.shouldReturnMovieList" />
         <item itemvalue="JUnit.MovieCatalogMenuTest.shouldReturnRightDisplayMessage" />
-        <item itemvalue="Application.BibliotecaApp" />
       </list>
     </recent_temporary>
   </component>
@@ -173,10 +169,10 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="377" y="312" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586191153591" />
-    <state x="1891" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587652600288">
+    <state x="1891" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587654146723">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state x="1891" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587652600288" />
+    <state x="1891" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654146723" />
     <state x="2552" y="273" key="#com.intellij.ide.util.MemberChooser" timestamp="1587653006439">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
@@ -219,47 +215,47 @@
     </state>
     <state x="1892" y="100" width="1720" height="880" key="DiffContextDialog/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587592987407" />
     <state x="1892" y="100" width="1720" height="880" key="DiffContextDialog/1792.0.1920.1080/0.0.1792.1120@1792.23.1920.1057" timestamp="1587555237871" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587653444541">
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1587654298066">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815322" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036454" />
     <state width="1750" height="316" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869163" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587653444541" />
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654298066" />
     <state width="939" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763553" />
     <state width="939" height="316" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567716" />
     <state width="939" height="316" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554601" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587653444540">
+    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1587654298064">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036451" />
     <state width="1750" height="316" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869162" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587653444540" />
+    <state width="1878" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654298064" />
     <state width="939" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763551" />
     <state width="939" height="316" key="GridCell.Tab.0.center/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567714" />
     <state width="939" height="316" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554599" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587653444539">
+    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1587654298064">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815320" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036450" />
     <state width="1750" height="316" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869161" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575887" />
-    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587653444539" />
+    <state width="1878" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654298064" />
     <state width="939" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763550" />
     <state width="939" height="316" key="GridCell.Tab.0.left/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567714" />
     <state width="939" height="316" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1014@1792.23.1920.1057" timestamp="1587651554599" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587653444540">
+    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1587654298065">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="316" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.0.1792.1120@-75.-1080.1920.1080" timestamp="1587149815321" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/-75.-1080.1920.1080/0.23.1792.1097@-75.-1080.1920.1080" timestamp="1587061036452" />
     <state width="1750" height="316" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587242869162" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1586197575888" />
-    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587653444540" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1587654298065" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.23.1792.1014@1792.0.1920.1080" timestamp="1587563763552" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.0.1920.1080/0.23.1792.1097@1792.0.1920.1080" timestamp="1587590567715" />
     <state width="939" height="316" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1014@1792.0.1920.1080" timestamp="1587558338994" />

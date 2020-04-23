@@ -21,7 +21,7 @@ public class CatalogTest {
         String bookToCheckout = "To kill a Mockingbird";
         int availableBooks = catalog.getAvailableAssets().size();
         // When
-        boolean successfulCheckout = catalog.checkoutAssets(bookToCheckout);
+        boolean successfulCheckout = catalog.checkoutAsset(bookToCheckout);
         int currentAvailableBooks = catalog.getAvailableAssets().size();
 
         assertTrue((currentAvailableBooks <  availableBooks) && successfulCheckout);
@@ -33,7 +33,7 @@ public class CatalogTest {
         String invalidBookToCheckout = "To kill a Mockingbirdo";
         int availableBooks = catalog.getAvailableAssets().size();
         // When
-        boolean successfulCheckout = catalog.checkoutAssets(invalidBookToCheckout);
+        boolean successfulCheckout = catalog.checkoutAsset(invalidBookToCheckout);
         int currentAvailableBooks = catalog.getAvailableAssets().size();
 
         assertTrue(currentAvailableBooks ==  availableBooks && !successfulCheckout);
@@ -43,10 +43,10 @@ public class CatalogTest {
     public void shouldNotCheckoutAUnavailableAsset(){
         Catalog catalog = new Catalog(new BookRepository());
         String bookToCheckout = "To kill a Mockingbird";
-        catalog.checkoutAssets(bookToCheckout);
+        catalog.checkoutAsset(bookToCheckout);
         int availableBooks = catalog.getAvailableAssets().size();
         // When
-        boolean successfulCheckout = catalog.checkoutAssets(bookToCheckout);
+        boolean successfulCheckout = catalog.checkoutAsset(bookToCheckout);
         int currentAvailableBooks = catalog.getAvailableAssets().size();
 
         assertTrue(currentAvailableBooks ==  availableBooks && !successfulCheckout);
@@ -56,10 +56,10 @@ public class CatalogTest {
     public void shouldCheckInAValidAssetByTitle(){
         String bookTitle = "To kill a Mockingbird";
         Catalog catalog = new Catalog(new BookRepository());
-        catalog.checkoutAssets(bookTitle);
+        catalog.checkoutAsset(bookTitle);
 
         // When
-        boolean successfulCheckIn = catalog.checkInBook(bookTitle);
+        boolean successfulCheckIn = catalog.checkInAsset(bookTitle);
 
         assertTrue(successfulCheckIn);
     }
@@ -70,7 +70,7 @@ public class CatalogTest {
         Catalog catalog = new Catalog(new MovieRepository());
 
         // When
-        boolean successfulCheckIn = catalog.checkInBook(invalidBookTitle);
+        boolean successfulCheckIn = catalog.checkInAsset(invalidBookTitle);
 
         assertFalse(successfulCheckIn);
     }
@@ -81,7 +81,7 @@ public class CatalogTest {
         Catalog catalog = new Catalog(new BookRepository());
 
         // When
-        boolean successfulCheckIn = catalog.checkInBook(invalidBookTitle);
+        boolean successfulCheckIn = catalog.checkInAsset(invalidBookTitle);
 
         assertFalse(successfulCheckIn);
     }
