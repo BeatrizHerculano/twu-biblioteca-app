@@ -7,10 +7,10 @@ import com.twu.biblioteca.repository.BookRepository;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class CheckoutBook implements Menu, Action {
+public class CheckoutAsset implements Menu, Action {
     PrintStream printStream;
 
-    public CheckoutBook(PrintStream printStream){
+    public CheckoutAsset(PrintStream printStream){
         this.printStream = printStream;
     }
     @Override

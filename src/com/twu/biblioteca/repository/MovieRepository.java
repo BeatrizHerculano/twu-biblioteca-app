@@ -13,4 +13,9 @@ public class MovieRepository implements AssetRepository{
     public ArrayList<Asset> getAllAssets() {
         return movies;
     }
+
+    @Override
+    public String getAssetTypeName() {
+        return "movie";
+    }
 }

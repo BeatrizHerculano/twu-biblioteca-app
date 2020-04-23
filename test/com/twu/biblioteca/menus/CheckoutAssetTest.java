@@ -1,9 +1,6 @@
 package com.twu.biblioteca.menus;
 
-import org.hamcrest.core.Is;
-import org.junit.Assert;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import java.io.PrintStream;
 
@@ -12,14 +9,14 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-public class CheckoutBookTest {
+public class CheckoutAssetTest {
     @Test
     public void shouldCheckUserInputForInvalidBookInformed(){
         String invalidTitle ="invalid";
         PrintStream printStream = mock(PrintStream.class);
-        CheckoutBook checkoutBook = new CheckoutBook(printStream);
+        CheckoutAsset checkoutAsset = new CheckoutAsset(printStream);
 
-        checkoutBook.checkForInvalidTitle(invalidTitle);
+        checkoutAsset.checkForInvalidTitle(invalidTitle);
 
        verify(printStream).println("Sorry, that book is not available");
     }
@@ -28,9 +25,9 @@ public class CheckoutBookTest {
     public void shouldAcceptUserInputWhenValidBookInformed(){
         String invalidTitle ="To kill a Mockingbird";
         PrintStream printStream = mock(PrintStream.class);
-        CheckoutBook checkoutBook = new CheckoutBook(printStream);
+        CheckoutAsset checkoutAsset = new CheckoutAsset(printStream);
 
-        checkoutBook.checkForInvalidTitle(invalidTitle);
+        checkoutAsset.checkForInvalidTitle(invalidTitle);
 
         verify(printStream).println("Thank you! Enjoy the book");
     }

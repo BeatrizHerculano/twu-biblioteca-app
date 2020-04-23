@@ -13,4 +13,9 @@ public class BookRepository implements AssetRepository{
     public ArrayList<Asset> getAllAssets() {
         return books;
     }
+
+    @Override
+    public String getAssetTypeName() {
+        return "book";
+    }
 }

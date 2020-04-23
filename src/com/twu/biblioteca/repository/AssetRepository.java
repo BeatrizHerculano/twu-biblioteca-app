@@ -6,4 +6,5 @@ import java.util.ArrayList;
 
 public interface AssetRepository {
     public ArrayList<Asset> getAllAssets();
+    public String getAssetTypeName();
 }

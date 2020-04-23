@@ -2,15 +2,18 @@ package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.models.Catalog;
+import com.twu.biblioteca.repository.AssetRepository;
 import com.twu.biblioteca.repository.BookRepository;
 
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class CheckInBook implements Menu, Action  {
+public class CheckInAsset implements Menu, Action  {
     PrintStream printStream;
-    public CheckInBook(PrintStream printStream){
+    AssetRepository repository;
+    public CheckInAsset(PrintStream printStream, AssetRepository repository){
         this.printStream = printStream;
+        this.repository = repository;
     }
 
     @Override
@@ -20,7 +23,7 @@ public class CheckInBook implements Menu, Action  {
 
     @Override
     public String getDisplayMessage() {
-        return "Check in a Book";
+        return "Check in a "+repository.getAssetTypeName();
     }
 
     @Override
@@ -32,8 +35,8 @@ public class CheckInBook implements Menu, Action  {
 
     @Override
     public void printOptions() {
-        Catalog catalog = new Catalog(new BookRepository());
-        printStream.println("Type the title of the book to check in:");
+        Catalog catalog = new Catalog(repository);
+        printStream.println("Type the title of the " +repository.getAssetTypeName()+ " to check in:");
     }
 
     @Override
@@ -50,10 +53,10 @@ public class CheckInBook implements Menu, Action  {
         boolean successfulCheckout = catalog.checkInAsset(userInput);
 
         if (successfulCheckout){
-            printStream.println("Thank you for returning the book");
+            printStream.println("Thank you for returning the " + repository.getAssetTypeName());
         }
         else{
-            printStream.println("That is not a valid book to return.");
+            printStream.println("That is not a valid "+repository.getAssetTypeName()+" to return.");
         }
     }
 }
