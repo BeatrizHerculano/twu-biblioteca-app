@@ -36,7 +36,7 @@ public class Catalog {
     }
 
 
-    public String getAvailableBooksString(){
+    public String getAvailableAssetsString(){
         String availableAssetsString = "";
         ArrayList<Asset> availableAssets = this.getAvailableAssets();
         for (Asset asset: availableAssets){

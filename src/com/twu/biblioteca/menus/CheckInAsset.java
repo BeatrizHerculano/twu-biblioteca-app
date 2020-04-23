@@ -48,7 +48,7 @@ public class CheckInAsset implements Menu, Action  {
     }
 
     public void checkForInvalidTitle(String userInput) {
-        Catalog catalog = new Catalog(new BookRepository());
+        Catalog catalog = new Catalog(repository);
 
         boolean successfulCheckout = catalog.checkInAsset(userInput);
 

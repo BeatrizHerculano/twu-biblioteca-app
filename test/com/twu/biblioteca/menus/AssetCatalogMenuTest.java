@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menus;
 
+import com.twu.biblioteca.repository.BookRepository;
 import org.junit.Test;
 
 import java.io.PrintStream;
@@ -9,16 +10,16 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 
-public class BookCatalogMenuTest {
+public class AssetCatalogMenuTest {
     @Test
     public void shouldReturnBookList(){
         // Given
         PrintStream printStream = mock(PrintStream.class);
-        BookCatalogMenu bookCatalogMenu = new BookCatalogMenu(printStream);
-        String expected = "This are the available books:\n1. Title: To kill a Mockingbird | Author: Harper Lee | Release Year: 1960\n";
+        AssetCatalogMenu assetCatalogMenu = new AssetCatalogMenu(printStream, new BookRepository());
+        String expected = "This is the available book catalog:\n1. Title: To kill a Mockingbird | Author: Harper Lee | Release Year: 1960\n";
 
         // When
-        String actual = bookCatalogMenu.getInitialMessage();
+        String actual = assetCatalogMenu.getInitialMessage();
 
         // Then
         assertThat(actual, is(equalTo(expected)));
@@ -27,10 +28,10 @@ public class BookCatalogMenuTest {
     @Test
     public void shouldReturnDisplayMessage(){
         PrintStream printStream = mock(PrintStream.class);
-        BookCatalogMenu bookCatalogMenu = new BookCatalogMenu(printStream);
+        AssetCatalogMenu assetCatalogMenu = new AssetCatalogMenu(printStream, new BookRepository());
         String expectedDisplayMessage = "List of books";
 
-        String actualDisplayMessage = bookCatalogMenu.getDisplayMessage();
+        String actualDisplayMessage = assetCatalogMenu.getDisplayMessage();
 
         assertThat(actualDisplayMessage, is(expectedDisplayMessage));
     }

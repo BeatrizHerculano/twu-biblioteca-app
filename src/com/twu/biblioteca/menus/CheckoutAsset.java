@@ -3,7 +3,6 @@ package com.twu.biblioteca.menus;
 import com.twu.biblioteca.models.Action;
 import com.twu.biblioteca.models.Catalog;
 import com.twu.biblioteca.repository.AssetRepository;
-import com.twu.biblioteca.repository.BookRepository;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -35,7 +34,7 @@ public class CheckoutAsset implements Menu, Action {
     @Override
     public void printOptions() {
         Catalog catalog = new Catalog(repository);
-        String availableBooksString =  catalog.getAvailableBooksString();
+        String availableBooksString =  catalog.getAvailableAssetsString();
         printStream.println(availableBooksString);
 
     }
